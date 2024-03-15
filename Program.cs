@@ -13,7 +13,7 @@ namespace aeml_db
     internal static class Program
     {
         private static string inputDir = null;  // Where to find input files
-
+        private static string outputDir = null;
         static void Main(string[] args)
         {
             for (int i = 0; i < args.Length; i++)
