@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4DBD3E5-B29F-459D-9478-BC781A3DF88C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>aeml_db</RootNamespace>
+    <AssemblyName>edpesp_db</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\osi\monarch\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.NET.StringTools.net35, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.NET.StringTools.1.0.0\lib\net35\Microsoft.NET.StringTools.net35.dll</HintPath>
+    </Reference>
+    <Reference Include="OSII.ArbiterNETToolkit">
+      <HintPath>Lib\OSII.ArbiterNETToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="OSII.ConversionToolkit, Version=1.3.4.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\OSII.ConversionToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="OSII.DatabaseConversionToolkit">
+      <HintPath>Lib\OSII.DatabaseConversionToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="OSII.DatabaseToolkit">
+      <HintPath>Lib\OSII.DatabaseToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\EdpespConverter.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespAlarms\EdpespAlarmGroup.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdespDemandScanDefn.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespChannel.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespChannelGroup.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespFepExtensions.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespFepHeader.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespInitScanDefn.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespRtuControl.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespRtuData.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespRtuDefn.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespScanData.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespFep\EdpespScanDefn.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespControlCenterInfo.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpConnection.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpExportDs.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpExportPoint.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpExtensions.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpImportDs.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpImportPoint.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespIccpScanClass.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespInboundCtrl.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespIccp\EdpespVccInfo.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespOpenCalc\EdpespExecutionGroup.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespOpenCalc\EdpespFormula.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespOpenCalc\EdpespFormulaTemplate.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespOpenCalc\EdpespTimer.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\Aor.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\Area.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\Duplicates.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespAccumPeriod.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespAccumulator.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespAnalog.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespAnalogConfig.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespClass2.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespDeviceInstance.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespScadaExtensions.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespScale.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespSetpoint.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespStation.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespStatus.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\EdpespUnit.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\Equip.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespScada\voltageconfig.cs" />
+    <Compile Include="Data\EdpespDatabases\EdpespStates\EdpespState.cs" />
+    <Compile Include="Data\EdpespParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
