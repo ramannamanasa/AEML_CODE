@@ -106,6 +106,7 @@
     <Compile Include="Data\EdpespDatabases\EdpespScada\voltageconfig.cs" />
     <Compile Include="Data\EdpespDatabases\EdpespStates\EdpespState.cs" />
     <Compile Include="Data\EdpespParser.cs" />
+    <Compile Include="NewAemlLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
